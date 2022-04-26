@@ -7,7 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class OtpAuthActivity extends AppCompatActivity {
@@ -30,6 +38,7 @@ public class OtpAuthActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(OtpAuthActivity.this,activity2.class);
                 String otp1 =username.getText().toString();
+                startActivity(intent);
             }
         });
     }

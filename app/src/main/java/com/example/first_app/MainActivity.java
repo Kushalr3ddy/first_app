@@ -1,5 +1,6 @@
 package com.example.first_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,15 +11,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.StringRequest;
+import java.io.IOException;
 
-//extra imports
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.URL;
-import java.net.URLConnection;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,53 +32,49 @@ public class MainActivity extends AppCompatActivity {
         TextView username=(TextView) findViewById(R.id.username);
         TextView password=(TextView) findViewById(R.id.password);
         Button loginbtn = (Button)findViewById(R.id.loginbtn);
+        TextView forgotpass = (TextView)findViewById(R.id.forgotpass);
         //default credentials
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,OtpAuthActivity.class);
                 String phone_no =username.getText().toString();
+                if(phone_no.length()!=10)
+                    Toast.makeText(MainActivity.this,"phone number should be 10 digits",Toast.LENGTH_SHORT).show();
                 if(password.getText().toString().equals("12345")){
-                    Toast.makeText(MainActivity.this,"Login Sucessful",Toast.LENGTH_SHORT).show();
+
 
 /////////////////////////////////
-                    try {
-                        URL url = new URL("https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP");
-                        BufferedReader reader=null;
-                        String text ="";
-                        // Send POST data request
-                        URLConnection conn = url.openConnection();
-                        conn.setDoOutput(true);
-                        conn.setRequestProperty("accept", "application/json");
-                        conn.setRequestProperty("Content-Type", "application/json");
-                        OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-                        wr.write( "{\"mobile\":\""+phone_no+"\"}" );
-                        wr.flush();
+                    OkHttpClient client = new OkHttpClient();
+                    String url = "https://otp.kushalreddy1.repl.co";
+                    Request request = new Request.Builder().url(url).build();
 
-                        // Get the server response
-
-                        reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                        StringBuilder sb = new StringBuilder();
-                        String line = null;
-
-                        // Read Server Response
-                        while((line = reader.readLine()) != null)
-                        {
-                            // Append server response in string
-                            sb.append(line + "\n");
+                    client.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                            e.printStackTrace();
                         }
 
+                        @Override
+                        public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                            if(response.isSuccessful()){
+                                String myresponse = response.body().string();
+                                MainActivity.this.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        forgotpass.setText(myresponse);
+                                        //Toast.makeText(MainActivity.this,myresponse,Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                        }
+                    });
 
-                        text = sb.toString();
-
-                        reader.close();
-                    } catch (Exception e) {
-
-                    }
-
-
+                    Toast.makeText(MainActivity.this,"Login Sucessful",Toast.LENGTH_SHORT).show();
+                    //forgotpass.setText("hello");
 //////////////////////////////////
                     intent.putExtra("otp", phone_no);
+
                     startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
