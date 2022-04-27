@@ -6,9 +6,11 @@
         <entry key="..\:/java_apps/first_app/app/src/main/res/drawable/ic_baseline_android_24.xml" value="0.1865" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2435" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2435" />
-        <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_2.xml" value="0.2" />
+        <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_2.xml" value="0.264" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_self_assessment.xml" value="0.25416666666666665" />
+        <entry key="..\:/java_apps/first_app/app/src/main/res/layout/activity_terms_page.xml" value="0.25416666666666665" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/layout/navigation_header.xml" value="0.178125" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/layout/otp_auth.xml" value="0.27291666666666664" />
         <entry key="..\:/java_apps/first_app/app/src/main/res/menu/example_menu.xml" value="0.27291666666666664" />

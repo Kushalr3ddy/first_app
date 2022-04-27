@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First_app">
         <activity
+            android:name=".terms_page"
+            android:exported="false" />
+        <activity
+            android:name=".self_assessment"
+            android:exported="false" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity

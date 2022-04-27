@@ -42,7 +42,7 @@
         android:background="#40000000"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="20dp"
-        android:hint="Phone no"
+        android:hint="Phone No"
         android:inputType="number"
         android:padding="20dp"
         android:textColor="@color/black"
@@ -57,14 +57,14 @@
         android:background="#40000000"
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:drawablePadding="20dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/loginbtn"
@@ -73,7 +73,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="forgot Password"
+        android:text="New user? register"
         android:textColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".terms_page">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="385dp"
+        android:layout_height="628dp"
+        android:text="
+                                Terms of use\n
+\n
+These terms of service (Terms) govern your use of the Contact tracing application for mobile and hand-held devices (App) and therefore the services provided under it. Please read these terms and conditions (Terms) cautiously before you transfer, install, or use the App. By installing the app ,you signify your acceptance of the Terms, and your agreement to be certain by them. The Terms could also be amended from time to time with notice to you.
+\n\n
+1.	Services:
+The App is an element of a service designed to (i) Enable users who have come in contact with other infected/potentially infected users support and traceability,(ii) to perform as a sign of whether or not or not a user has been infected or is probably going to be infected. (iii) give users helpful data with respect to COVID-19, (iv) permit users to access convenience services with respect to COVID-19
+\n\n
+2.	Requirements for use
+You conform to activate and permit the App access to the Bluetooth and background GPS services on your mobile or hand-held device. You acknowledge that if your device is changed or in airplane mode, if Bluetooth and GPS services on your device are turned off, or if you revoke the App’s access to Bluetooth and GPS services on your device, it'll not be able to capture all necessary info which can impair the completeness and accuracy of the Services. You conform to keep the mobile or hand-held device on that the App is put in your possession at most times and to not share it with or enable anyone else to use it. You acknowledge that if therefore it might end in you being incorrectly assessed as seems to be infected with COVID-19 or not being assessed per se once you are.
+\n\n
+3.	Use
+You agree that you just can solely use the App in straightness and will not give false or dishonest info concerning yourself or your infection standing. You agree that you just won't do something to throttle, engineer a denial of service, or in the other manner impair the performance or practicality of the App. You agree that you just won't use the App for any purpose that it had been not supposed together with, however not restricted to, accessing info concerning registered users hold on within the App, distinctive or making an attempt to spot alternative registered users or gaining or making an attempt to achieve access to the cloud information of the Service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+</androidx.constraintlayout.widget.ConstraintLayout>
