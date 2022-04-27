@@ -31,6 +31,8 @@
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
         android:hint="otp from sms"
+        android:inputType="number"
+        android:maxLength="4"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -48,6 +50,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="confirm" />
+
     <TextView
         android:id="@+id/forgotpass"
         android:layout_width="wrap_content"

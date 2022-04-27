@@ -31,14 +31,17 @@ public class OtpAuthActivity extends AppCompatActivity {
 
         Intent otpintent = getIntent();
         String message = otpintent.getStringExtra("otp");
+        String otp = otpintent.getStringExtra("otp1");
         top.setText("otp has been sent to: "+message);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(OtpAuthActivity.this,activity2.class);
-                String otp1 =username.getText().toString();
+                if(username.getText().toString().equals(otp))
                 startActivity(intent);
+                else
+                    Toast.makeText(OtpAuthActivity.this,"invalid otp",Toast.LENGTH_SHORT).show();
             }
         });
     }

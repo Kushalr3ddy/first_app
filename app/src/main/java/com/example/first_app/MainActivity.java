@@ -33,7 +33,17 @@ public class MainActivity extends AppCompatActivity {
         TextView password=(TextView) findViewById(R.id.password);
         Button loginbtn = (Button)findViewById(R.id.loginbtn);
         TextView forgotpass = (TextView)findViewById(R.id.forgotpass);
-        //default credentials
+
+        //click listener for new user button
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent register = new Intent(MainActivity.this, register.class);
+                startActivity(register);
+            }
+        });
+
+        // click listener for sign in button
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
 /////////////////////////////////
                     OkHttpClient client = new OkHttpClient();
-                    String url = "https://otp.kushalreddy1.repl.co";
+                    String otp ="5599";
+                    String url = "https://www.fast2sms.com/dev/bulkV2?authorization=graoNcAiJm1MKh0EfLWuI9kpRbnTQ3XGl6ztCOBYHqDZdSeFvUSMAnFX6fLl4okKEm8R7UeH1rT50stO&variables_values="+otp+"&route=otp&numbers="+phone_no;
                     Request request = new Request.Builder().url(url).build();
 
                     client.newCall(request).enqueue(new Callback() {
@@ -62,7 +73,11 @@ public class MainActivity extends AppCompatActivity {
                                 MainActivity.this.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        forgotpass.setText(myresponse);
+                                        intent.putExtra("otp", phone_no);
+                                        intent.putExtra("otp1",otp);
+
+                                        startActivity(intent);
+                                        //forgotpass.setText(myresponse);
                                         //Toast.makeText(MainActivity.this,myresponse,Toast.LENGTH_SHORT).show();
                                     }
                                 });
@@ -73,9 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Login Sucessful",Toast.LENGTH_SHORT).show();
                     //forgotpass.setText("hello");
 //////////////////////////////////
-                    intent.putExtra("otp", phone_no);
 
-                    startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
                 }
