@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         TextView username=(TextView) findViewById(R.id.username);
         TextView password=(TextView) findViewById(R.id.password);
         Button loginbtn = (Button)findViewById(R.id.loginbtn);
-        TextView forgotpass = (TextView)findViewById(R.id.forgotpass);
+        /*TextView forgotpass = (TextView)findViewById(R.id.forgotpass);
 
         //click listener for new user button
         forgotpass.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent register = new Intent(MainActivity.this, register.class);
                 startActivity(register);
+            }
+        });*/
+        TextView register = (TextView)findViewById(R.id.register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this,register.class);
+                startActivity(intent);
             }
         });
 
