@@ -37,7 +37,7 @@ public class activity2 extends AppCompatActivity {
                 startActivity(browserIntent);
             }
         });
-/*
+
         terms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +45,7 @@ public class activity2 extends AppCompatActivity {
                 startActivity(show_terms);
 
             }
-        });*/
+        });
     }
 
 

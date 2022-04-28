@@ -11,6 +11,7 @@
         android:id="@+id/textView4"
         android:layout_width="385dp"
         android:layout_height="628dp"
+        android:textColor="@color/black"
         android:text="
                                 Terms of use\n
 \n
