@@ -12,16 +12,13 @@
         android:id="@+id/textView3"
         android:layout_width="233dp"
         android:layout_height="35dp"
+        android:gravity="center"
         android:text="Self Assessment"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="58dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -30,20 +27,18 @@
         android:text="Do you have any of the below symptoms?"
         android:textColor="@color/black"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="125dp"
+        tools:ignore="MissingConstraints"/>
 
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/radioVeryfrequent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Very frequent "
         tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="646dp" />
+        tools:layout_editor_absoluteY="646dp"
+        tools:ignore="MissingConstraints"/>
 
     <RadioButton
         android:id="@+id/radio_no"
@@ -51,80 +46,67 @@
         android:layout_height="wrap_content"
         android:text="No"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="461dp"
+        tools:ignore="MissingConstraints"/>
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/symptomsLoss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Loss of taste/smell"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="216dp"
+        tools:ignore="MissingConstraints"/>
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/symptomsough"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cough"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="168dp"
+        tools:ignore="MissingConstraints"/>
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/radioNotfrequent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Not so frequent "
         tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="547dp" />
+        tools:layout_editor_absoluteY="547dp"
+        tools:ignore="MissingConstraints"/>
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/symptomsFever"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fever"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="169dp"
+        tools:ignore="MissingConstraints"/>
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/radioQuitefrequent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quite frequent"
         tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="595dp" />
+        tools:layout_editor_absoluteY="595dp"
+        tools:ignore="MissingConstraints"/>
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/symptomsNone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="None of the above"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="313dp"
+        tools:ignore="MissingConstraints"/>
 
     <RadioButton
         android:id="@+id/radio_yes"
@@ -132,25 +114,19 @@
         android:layout_height="wrap_content"
         android:text="Yes"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="413dp"
+        tools:ignore="MissingConstraints"/>
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/symptomsBreathing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Difficulty in Breathing"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="264dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/incontact2"
@@ -159,12 +135,9 @@
         android:text="Frequency in cough?"
         android:textColor="@color/black"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.738" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="509dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/incontact"
@@ -173,19 +146,18 @@
         android:text="Have you been in contact with a covid positive person in last 10-15 days?"
         android:textColor="@color/black"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="368dp"
+        tools:ignore="MissingConstraints"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="682dp" />
+        android:text="Continue Assessment"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="682dp"
+        tools:ignore="MissingConstraints"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

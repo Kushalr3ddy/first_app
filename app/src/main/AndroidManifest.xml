@@ -3,8 +3,8 @@
     package="com.example.first_app">
     <!-- permissions for INTERNET -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.First_app">
+        <activity
+            android:name=".copythis"
+            android:exported="false"
+            android:label="@string/title_activity_copythis"
+            android:theme="@style/Theme.First_app.NoActionBar" />
+        <activity
+            android:name=".self_assessment_2"
+            android:exported="false"
+            android:label="@string/title_activity_self_assessment2"
+            android:theme="@style/Theme.First_app.NoActionBar" />
         <activity
             android:name=".terms_page"
             android:exported="false" />
