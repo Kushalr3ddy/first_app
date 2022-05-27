@@ -5,91 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".oglogin">
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/loginimg"
+        android:adjustViewBounds="true"
+        android:maxWidth="250dp"
+        android:maxHeight="420dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="110dp"
+        android:gravity="center"/>
     <TextView
         android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="Register New Account"
+        android:text="Sign In"
         android:textColor="@color/black"
         android:textSize="35dp" />
 
+
     <EditText
-        android:id="@+id/firstname"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signin"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="140dp"
         android:background="#40000000"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="20dp"
-        android:hint="First name"
-
+        android:hint="Phone No"
+        android:inputType="number"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
-
     <EditText
-        android:id="@+id/lastname"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/firstname"
+        android:layout_below="@+id/username"
         android:layout_marginTop="20dp"
         android:background="#40000000"
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:drawablePadding="20dp"
-        android:hint="Last name"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
-    <Button
-        android:id="@+id/dob"
-        style="?android:spinnerStyle"
-        android:layout_width="180dp"
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lastname"
-        android:layout_marginTop="20dp"
-        android:shadowColor="@color/black"
-        android:text="select DOB"
+        android:layout_below="@id/loginbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="New user? register"
         android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/sex"
-        style="?android:spinnerStyle"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lastname"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/dob"
-        android:shadowColor="@color/black"
-        android:text="select gender"
-
-        android:textColor="@color/black" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dob"
+        android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Register" />
-
-
+        android:text="Login" />
 
 
 
